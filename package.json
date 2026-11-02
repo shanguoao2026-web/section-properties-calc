@@ -1,0 +1,35 @@
+{
+  "name": "section-properties-calc",
+  "version": "1.0.0",
+  "description": "Cross-section properties for common beam sections: area, second moment, elastic modulus, and radius of gyration",
+  "license": "MIT",
+  "author": "shanguoao2026-web",
+  "type": "module",
+  "bin": {
+    "section-properties": "./dist/cli.js"
+  },
+  "main": "./dist/calc.js",
+  "types": "./dist/calc.d.ts",
+  "files": [
+    "dist/calc.js",
+    "dist/calc.d.ts",
+    "dist/cli.js",
+    "dist/cli.d.ts",
+    "dist/format.js",
+    "dist/format.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "test": "npm run build && node --test dist/calc.test.js dist/cli.test.js",
+    "start": "node dist/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "typescript": "^5.9.2"
+  }
+}
